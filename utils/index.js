@@ -64,13 +64,60 @@ The last section of a good README is a license. This lets other developers know 
 
 //Variable containing questions to be asked
 
-var questions = [];
+var questions = [
+  {
+    type: 'input',
+    name: 'projectName',
+    message: "What's the name of your project",
+  },
+  {
+    type: 'input',
+    name: 'description',
+    message: "Please describe your project.",
+  },
+  {
+    type: 'input',
+    name: 'installationInstructions',
+    message: "Please provide instructions for a user to install your project.",
+  },
+  {
+    type: 'input',
+    name: 'usage',
+    message: "Please provide Usage information for your project",
+  },
+  {
+    type: 'input',
+    name: 'contributionGuidelines',
+    message: "Please provide contribution quidelines for your project",
+  },
+  {
+    type: 'input',
+    name: 'testInstructions',
+    message: "Please provide testing instructions for your project",
+  },
+  {
+    type: 'list',
+    name: 'license',
+    message: "Please select what type of license best suits your project",
+    choices: ["1","2","3","4"]
+  },
+  {
+    type: 'input',
+    name: 'gitHubUserName',
+    message: "What's your GitHub Username?",
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message: "What's your email address?",
+  }
+];
 
 //test function to attempt md write
 
-fs.writeFile('README.md', template, (err) => {
-    if (err) throw err;
-    console.log('The file has been saved!');
-  });
+// fs.writeFile('README.md', template, (err) => {
+//     if (err) throw err;
+//     console.log('The file has been saved!');
+//   });
 
 //Inquirer module to be invoked to run inquirer prompts
