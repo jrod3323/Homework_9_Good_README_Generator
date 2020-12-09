@@ -121,3 +121,15 @@ var questions = [
 //   });
 
 //Inquirer module to be invoked to run inquirer prompts
+
+inquirer
+  .prompt(questions)
+  .then((answers) => {
+    console.log(answers)
+  }) 
+  .catch(error => {
+    if(error) {
+      // Prompt couldn't be rendered in the current environment
+      console.log(error)
+    } 
+  });
