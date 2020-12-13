@@ -50,7 +50,7 @@ My Email Address - ${email}
 
 ## License
 
-${license}
+This application is covered under the following license: ${license}.  For full description of the license please 
 
 `
 };
@@ -106,6 +106,32 @@ var questions = [
     message: "What's your email address?",
   }
 ];
+
+
+//License Object
+
+const licenseTypes = [
+  {
+  name: "MIT License",
+  url: "https://choosealicense.com/licenses/mit/",
+  badge: "https://img.shields.io/badge/license-MIT-green",
+  },
+  {
+    name:"General Public License",
+    url: "https://choosealicense.com/licenses/gpl-3.0/",
+    badge: "https://img.shields.io/badge/license-GPL%20v%203.0-green",
+  },
+  {
+    name: "Apache License 2.0",
+    url: "https://choosealicense.com/licenses/apache-2.0/",
+    badge: "https://img.shields.io/badge/license-Apache%202.0-green",
+  },
+  {
+    name: "ISC-License",
+    url: "https://choosealicense.com/licenses/isc/",
+    badge: "https://img.shields.io/badge/license-ISC-green",
+  }
+]
 
 //test function to attempt md write
 
