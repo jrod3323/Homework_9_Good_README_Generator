@@ -3,8 +3,10 @@ const inquirer = require("inquirer");
 
 //Create function to make template
 
-var createReadMe = (projectName, description ,installationInstructions, usage, contributionGuidelines, testingGuidelines , license ,gitHubUserName, email ) => {  
+var createReadMe = (projectName, description ,installationInstructions, usage, contributionGuidelines, testingGuidelines , licenseName, licenseURL, licenseBadge ,gitHubUserName, email ) => {  
   return `# ${projectName}
+
+[![License](${licenseBadge})](${licenseURL})
 
 ## Table of Contents 
 
@@ -50,7 +52,7 @@ My Email Address - ${email}
 
 ## License
 
-This application is covered under the following license: ${license}.  For full description of the license please 
+This application is covered under the following license: ${licenseName}.  For full description of the license please [Click Here](${licenseURL})
 
 `
 };
@@ -93,7 +95,12 @@ var questions = [
     type: 'list',
     name: 'license',
     message: "Please select what type of license best suits your project",
-    choices: ["1","2","3","4"]
+    choices: [
+      "MIT License - short and simple permissive license with conditions only requiring preservation of copyright and license notices",
+      "General Public License - Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license",
+      "Apache License v 2.0 - permissive license whose main conditions require preservation of copyright and license notices",
+      "ISC-License - permissive license lets people do anything with your code with proper attribution and without warranty "
+    ],
   },
   {
     type: 'input',
@@ -108,7 +115,7 @@ var questions = [
 ];
 
 
-//License Object
+//License Array
 
 const licenseTypes = [
   {
@@ -147,7 +154,26 @@ inquirer
   .then(answers => {
     
     const {projectName, description ,installationInstructions, usage, contributionGuidelines, testingGuidelines , license ,gitHubUserName, email} = answers;
-    const templateReadMe = createReadMe(projectName, description ,installationInstructions, usage, contributionGuidelines, testingGuidelines , license ,gitHubUserName, email);
+// If statement to populate based on license choice
+    if(license === "MIT License - short and simple permissive license with conditions only requiring preservation of copyright and license notices"){
+      licenseName = licenseTypes[0].name ;
+      licenseURL = licenseTypes[0].url ;
+      licenseBadge = licenseTypes[0].badge;
+    } else if (license === "General Public License - Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license"){
+      licenseName = licenseTypes[1].name ;
+      licenseURL = licenseTypes[1].url ;
+      licenseBadge = licenseTypes[1].badge;
+    } else if(license === "Apache License v 2.0 - permissive license whose main conditions require preservation of copyright and license notices"){
+      licenseName = licenseTypes[2].name ;
+      licenseURL = licenseTypes[2].url ;
+      licenseBadge = licenseTypes[2].badge;
+    } else if(license === "ISC-License - permissive license lets people do anything with your code with proper attribution and without warranty "){
+      licenseName = licenseTypes[3].name ;
+      licenseURL = licenseTypes[3].url ;
+      licenseBadge = licenseTypes[3].badge;
+    };
+
+    const templateReadMe = createReadMe(projectName, description ,installationInstructions, usage, contributionGuidelines, testingGuidelines , licenseName, licenseURL, licenseBadge ,gitHubUserName, email );
 
       fs.writeFile('README.md', templateReadMe, (err) => {
       if (err) throw err;
