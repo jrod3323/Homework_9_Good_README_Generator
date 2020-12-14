@@ -176,7 +176,7 @@ inquirer
 
     const templateReadMe = createReadMe(projectName, description ,installationInstructions, usage, contributionGuidelines, testingGuidelines , licenseName, licenseURL, licenseBadge ,gitHubUserName, email );
 
-      fs.writeFile('README.md', templateReadMe, (err) => {
+      fs.writeFile('newREADME.md', templateReadMe, (err) => {
       if (err) throw err;
       console.log('The file has been saved!');
     });

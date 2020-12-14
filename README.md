@@ -12,27 +12,24 @@
 
 ## Description 
 
-This is a default description
+This application is designed to provide a user with a professional ReadMe.md file for their application.  Once the program is run, the user will be prompted for various information that will be inputted by the user and pushed to their generated newReadMe.md file.  
 
 
 ## Installation
 
-This is how you would install
+To install the application you must first install node.js.  You can [click here](https://nodejs.org/en/download/) to navigate to the Node.js download page.  After installing node, you must also install the required npm packages.  To do so, navigate to the applications file path in the terminal and type "npm i" or "npm i inquirer" to install the required inquirer modules. 
 
 
 ## Usage 
 
-This is how you use
+To run the program, please complete installation instructions first. Once the porgam is installed, navigate to the programs file pathway in the terminal and then run the program by typing "node index.js".  This will initiate the program and you will be prompted with a series of questions.  After answer all of the questions, a .md file will be genereated labeled newREADME.md .  This will be your new auto generated .md file for your project.
 
 
 ## Screenshot
 
 ![Front Page Gif](./images/readmeGenerator.gif)
 
-
-## Test
-
-This is how you would test
+You can also access a video walkthrough of the application by [Clicking Here](https://drive.google.com/file/d/10fi6gJGTOrooF_2TngOV-KZKojk43gtI/view?usp=sharing).
 
 
 ## Questions
