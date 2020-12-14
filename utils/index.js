@@ -14,6 +14,7 @@ var createReadMe = (projectName, description ,installationInstructions, usage, c
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contribute](#contribute)
+* [Test](#test)
 * [License](#license)
 
 ## Description 
