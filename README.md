@@ -29,7 +29,7 @@ To run the program, please complete installation instructions first. Once the po
 
 ![Front Page Gif](./images/readmeGenerator.gif)
 
-You can also access a video walkthrough of the application by [Clicking Here](https://drive.google.com/file/d/10fi6gJGTOrooF_2TngOV-KZKojk43gtI/view?usp=sharing).
+You can also access a video walkthrough of the application by [Clicking Here](https://youtu.be/CJ1-fmh_Ir0).
 
 
 ## Questions
